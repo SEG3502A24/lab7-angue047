@@ -4,3 +4,7 @@
 Access SpringBoot RESTFul API - in branch *server* 
 
 Access Angular Client Application - in branch *client*
+
+Name: Anna C. N'guessan-Ble
+Student number: 300280842
+
