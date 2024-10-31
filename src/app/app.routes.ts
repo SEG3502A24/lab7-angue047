@@ -4,12 +4,21 @@ import {AboutComponent} from "./about/about.component";
 import {ContactComponent} from "./contact/contact.component";
 import {BooksComponent} from "./books/books.component";
 import {BookComponent} from "./books/book/book.component";
+//added imports for author components
+import {AuthorsComponent} from "./authors/authors.component";
+import {AuthorComponent} from "./authors/author/author.component";
+//end imports for author
 import {LoginComponent} from "./login/login.component";
 import {AdminComponent} from "./admin/admin.component";
 import {loggedInGuard} from "./logged-in.guard";
 
 const booksRoutes: Routes = [
   {path: ':id', component: BookComponent}
+];
+
+//route for author
+const authorsRoutes: Routes = [
+  {path: ':id', component: AuthorComponent}
 ];
 
 export const routes: Routes = [
@@ -25,6 +34,13 @@ export const routes: Routes = [
   {path: 'books', component: BooksComponent,
     children: booksRoutes
   },
+
+  //author
+  {path: 'authors', component: AuthorsComponent,
+    children: authorsRoutes
+  },
+  //author
+
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: HomeComponent}
 ];
