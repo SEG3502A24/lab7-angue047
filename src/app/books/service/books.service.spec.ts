@@ -12,7 +12,7 @@ describe('BooksService', () => {
     TestBed.configureTestingModule({
     imports: [RouterTestingModule],
     providers: [BooksService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
-  });
+});
     service = TestBed.inject(BooksService);
   });
 
